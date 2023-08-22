@@ -1,0 +1,29 @@
+{
+  "name": "testcafe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe chrome:headless",
+    "ts:live:spec": "testcafe chrome --live",
+    "ts:debug:spec": "testcafe chrome -d",
+    "allure:generate": "allure generate allure/allure-results --clean",
+    "allure:clean": "rm -rf allure ; rm -rf allure-report",
+    "build": "tsc"
+  },
+  "keywords": ["testcafe", "e2e", "web"],
+  "author": "Kryshtopenko Dmytro",
+  "license": "ISC",
+  "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@types/node": "^20.5.1",
+    "allure-commandline": "^2.23.1",
+    "testcafe": "^3.2.0",
+    "testcafe-reporter-html": "^1.4.6",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "testcafe-reporter-allure-expanded": "^1.1.0"
+  }
+}
