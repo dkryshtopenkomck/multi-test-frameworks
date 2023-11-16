@@ -1,0 +1,27 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1700109099887' stop='1700109099906'>
+    <name>Login Test</name>
+    <title>Login Test</title>
+    <test-cases>
+        <test-case start='1700109097513' status='passed' stop='1700109099885'>
+            <name>Successful Login</name>
+            <title>Successful Login</title>
+            <labels>
+                <label name='severity' value='blocker'/>
+            </labels>
+            <parameters>
+                <parameter kind='environment-variable' name='Browser 1: ' value='Chrome 119.0.0.0 / Ventura 13'/>
+                <parameter kind='argument' name='User Agent' value='Chrome 119.0.0.0 / Ventura 13, '/>
+                <parameter kind='argument' name='Jira Story Link' value='https://jiraexample.cloud/browse/test id'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Executive Video' source='a01d620a-4341-4540-90af-0fe8558e35e4-attachment.mp4' type='video/mp4' size='313193'/>
+            </attachments>
+            <failure>
+                <message>This test has been passed.</message>
+                <stack-trace>no error</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

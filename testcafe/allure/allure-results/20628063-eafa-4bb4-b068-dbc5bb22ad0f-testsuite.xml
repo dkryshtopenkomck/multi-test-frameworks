@@ -1,0 +1,36 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1700109106839' stop='1700109106859'>
+    <name>Login Test</name>
+    <title>Login Test</title>
+    <test-cases>
+        <test-case start='1700109100582' status='failed' stop='1700109106830'>
+            <name>Failed test</name>
+            <title>Failed test</title>
+            <labels>
+                <label name='severity' value='undefined'/>
+            </labels>
+            <parameters>
+                <parameter kind='environment-variable' name='Browser 1: ' value='Chrome 119.0.0.0 / Ventura 13'/>
+                <parameter kind='argument' name='User Agent' value='Chrome 119.0.0.0 / Ventura 13, '/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Executive Video' source='857c12c0-5182-4472-a00b-dc15c09f42f7-attachment.mp4' type='video/mp4' size='436742'/>
+                <attachment title='Screenshot' source='a915f2e4-ec87-4147-9ca0-8747c7e078ca-attachment.png' type='image/png' size='259760'/>
+            </attachments>
+            <failure>
+                <message>AssertionError: expected 1 to deeply equal 2</message>
+                <stack-trace>AssertionError: expected 1 to deeply equal 2
+                
+                + expected - actual
+                
+                -1
+                +2
+                
+                
+                Browser: Chrome 119.0.0.0 / Ventura 13
+                Screenshot: /Users/Dmytro_Kryshtopenko/WebstormProjects/multi-test-frameworks/testcafe/reports/screenshots/2023-11-16_13-31-36/Failed test/Chrome_119.0.0.0_Ventura_13/2.png</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

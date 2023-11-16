@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"skipped","Thu Nov 16 13:31:47 JST 2023","Thu Nov 16 13:31:47 JST 2023","0","","Login Test","","Login Test","Skipped test","Skipped test",""
+"failed","Thu Nov 16 13:31:40 JST 2023","Thu Nov 16 13:31:46 JST 2023","6248","","Login Test","","Login Test","Failed test","Failed test",""
+"passed","Thu Nov 16 13:31:37 JST 2023","Thu Nov 16 13:31:39 JST 2023","2372","","Login Test","","Login Test","Successful Login","Successful Login",""
