@@ -1,0 +1,27 @@
+{
+  "name": "cypress-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test": "npm run cypress:run",
+    "test:open": "npm run cypress:open",
+    "test:ci": "npm run cypress:run -- --headless --record",
+    "test:all": "npm run cypress:run -- --spec 'cypress/integration/**/*.spec.js'",
+    "cy:clean": "rm -rf cypress/videos && rm -rf cypress/screenshots",
+    "cy:lint": "eslint cypress",
+    "cy:run-and-lint": "npm run cypress:run && npm run cy:lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.0",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "cypress-plugin-api": "^2.11.1"
+  }
+}
