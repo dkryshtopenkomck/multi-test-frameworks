@@ -1,8 +1,9 @@
 start:
+	npm run build
 	docker-compose up
 
 clean:
-	rm -rf cypress/screenshots cypress/videos cypress/downloads
+	rm -rf dist
 
 install:
 	rm -rf node_modules package-lock.json

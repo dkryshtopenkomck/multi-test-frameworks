@@ -9,7 +9,8 @@
     "ts:debug:spec": "testcafe chrome -d",
     "allure:generate": "allure generate allure/allure-results --clean",
     "allure:clean": "rm -rf allure ; rm -rf allure-report",
-    "build": "tsc"
+    "build": "tsc",
+    "prebuild": "rm -rf dist"
   },
   "keywords": ["testcafe", "e2e", "web"],
   "author": "Kryshtopenko Dmytro",

@@ -1,4 +1,5 @@
 import LoginPage from '../page-objects/login-page';
+import {Selector} from "testcafe";
 
 fixture('Login Test').page('https://seleniumbase.io/demo_page');
 
@@ -16,6 +17,7 @@ test
     });
 
 test("Failed test", async (t) => {
+    const test = Selector('#test');
     await t.expect(1).eql(2);
 })
 

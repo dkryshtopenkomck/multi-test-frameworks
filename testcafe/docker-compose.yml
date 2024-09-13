@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  testcafe:
+    image: testcafe/testcafe:latest
+    container_name: testcafe
+    volumes:
+      - ./dist:/tests
+    command: 'firefox /tests/**/*.js'

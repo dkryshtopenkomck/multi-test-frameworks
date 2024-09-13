@@ -1,6 +1,8 @@
-brew install k6
+![img.png](assets/img.png)
 
-plugin: https://grafana.com/grafana/dashboards/2587-k6-load-testing-results/
+```brew install k6```
+
+plugin (2587): https://grafana.com/grafana/dashboards/2587-k6-load-testing-results/
 
 docs: https://medium.com/@nairgirish100/k6-with-docker-compose-influxdb-grafana-344ded339540
 
@@ -9,6 +11,10 @@ run db and grafana
 
 run tests
 ```docker-compose run --rm k6 run /scripts/get-200.test.js```
+
+1. Open data source http://localhost:3000/datasources
+2. Add InfluxDB with url http://influxdb:8086 and database "k6"
+3. Import K6 dashboard (2587) http://localhost:3000/dashboard/import
 
 # Метрики k6 Теста
 

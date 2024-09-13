@@ -38,3 +38,5 @@ services:
       - K6_OUT=influxdb=http://influxdb:8086/k6
     volumes:
       - ./dist:/scripts
+    entrypoint: [ "k6" ]
+    command: [ "run", "/scripts/${K6_FILE}.test.js" ]

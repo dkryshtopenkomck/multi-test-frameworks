@@ -22,6 +22,10 @@
     "webpack-glob-entries": "^1.0.1"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "start": "k6 run ./dist/get-200.test.js",
+    "start:docker": "K6_FILE=get-200 docker-compose up k6",
+    "start:docker2": "K6_FILE=get-200 && docker-compose run --rm k6 run /scripts/${K6_FILE}.test.js",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --config webpack.config.js",
+    "prebuild": "rm -rf dist"
   }
 }
