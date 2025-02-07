@@ -16,10 +16,10 @@ test
         await LoginPage.login('your_username', 'your_password');
     });
 
-test("Failed test", async (t) => {
-    const test = Selector('#test');
-    await t.expect(1).eql(2);
-})
+// test("Failed test", async (t) => {
+//     const test = Selector('#test');
+//     await t.expect(1).eql(2);
+// })
 
 test.skip("Skipped test", async (t) => {
 })

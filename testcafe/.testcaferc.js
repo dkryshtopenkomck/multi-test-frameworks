@@ -2,7 +2,7 @@ const os = require("os");
 const path = require("path");
 
 module.exports = { // Settings go inside the module.exports statement.
-    src: "./tests/**/*.ts", // Tests
+    src: "./tests/**/*.spec.ts", // Tests
     browsers: ["chrome"], // Browsers
     baseUrl: "https://seleniumbase.io/demo_page", // URL
     skipJsErrors: true, // Ignores JavaScript errors

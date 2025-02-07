@@ -2,8 +2,7 @@ start:
 	npm test
 
 start-docker:
-	npm run build
-	docker-compose run --rm --build testcafe
+	docker-compose run --rm --build playwright
 
 clean:
 	npm run clean

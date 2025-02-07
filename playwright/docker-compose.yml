@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  playwright:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: playwright
+    volumes:
+      - .:/app
+#    environment:
+#      - PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+    command: npx playwright test --project=chromium
+    ipc: host

@@ -1,10 +1,15 @@
 start:
+	echo "k6-loading:start"
+	#npm run build
+	#docker-compose up
+
+start-docker:
 	npm run build
-	docker-compose up
+	docker-compose run --rm --build k6
 
 clean:
 	rm -rf dist
 
 install:
-	rm -rf node_modules package-lock.json
-	npm install
+	rm -rf node_modules
+	npm ci

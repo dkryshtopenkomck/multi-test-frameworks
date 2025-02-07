@@ -1,0 +1,25 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:ui": "npx playwright test --ui",
+    "test:slowmo": "npx playwright test --headed --slow-mo=500",
+    "test:report": "npx playwright test --reporter=html && npx playwright show-report",
+    "test:filter": "npx playwright test -g",
+    "install-deps": "npx playwright install --with-deps",
+    "codegen": "npx playwright codegen",
+    "clean": "rm -rf playwright-report test-results"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.1"
+  }
+}
