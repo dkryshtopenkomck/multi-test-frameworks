@@ -5,7 +5,8 @@ start:
 
 start-docker:
 	npm run build
-	docker-compose run --rm --build k6
+	docker-compose run --rm k6 run /scripts/get-200.test.js
+	#docker-compose run --rm --build k6
 
 clean:
 	rm -rf dist

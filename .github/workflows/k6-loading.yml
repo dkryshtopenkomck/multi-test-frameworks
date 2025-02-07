@@ -36,4 +36,4 @@ jobs:
       - name: Build and run K6 loading container
         working-directory: ./k6-loading
         run: |
-          docker-compose -f docker-compose.yml up --build --abort-on-container-exit --exit-code-from k6-loading
+          docker-compose -f docker-compose.yml run --rm k6 run /scripts/get-200.test.js

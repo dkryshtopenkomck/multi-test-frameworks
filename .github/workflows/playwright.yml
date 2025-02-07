@@ -36,4 +36,4 @@ jobs:
       - name: Build and run Playwright container
         working-directory: ./playwright
         run: |
-          docker-compose -f docker-compose.yml up --build --abort-on-container-exit --exit-code-from playwright
+          docker-compose -f docker-compose.yml run --rm --build playwright
