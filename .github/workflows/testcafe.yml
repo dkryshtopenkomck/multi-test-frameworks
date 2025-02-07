@@ -36,4 +36,4 @@ jobs:
       - name: Build and run TestCafe container
         working-directory: ./testcafe
         run: |
-          docker-compose -f docker-compose.yml run --rm --build testcafe
+          docker-compose -f docker-compose.yml up --build --abort-on-container-exit --exit-code-from testcafe
