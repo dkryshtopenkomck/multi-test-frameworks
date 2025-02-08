@@ -36,4 +36,4 @@ jobs:
       - name: Build and run Playwright container
         working-directory: ./playwright
         run: |
-          docker-compose up --build --force-recreate
+          docker-compose build --abort-on-container-exit --exit-code-from
