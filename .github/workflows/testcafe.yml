@@ -36,4 +36,4 @@ jobs:
       - name: Build and run TestCafe container
         working-directory: ./testcafe
         run: |
-          docker-compose run testcafe
+          docker-compose up --build --force-recreate
