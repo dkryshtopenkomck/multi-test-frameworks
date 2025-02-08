@@ -8,10 +8,10 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install your Node.js dependencies
-RUN npm ci
+RUN npm install
 
 # Copy the rest of your application code
 COPY . .
 
 # By default, we'll run the tests, but you can open a bash shell if needed
-CMD ["npx", "playwright", "test"]
+CMD ["npm", "test"]
