@@ -36,4 +36,4 @@ jobs:
       - name: Build and run Cypress API container
         working-directory: ./cypress-api
         run: |
-          docker-compose run --build --no-cache --abort-on-container-exit --exit-code-from cypress
+          docker-compose up --build --abort-on-container-exit --exit-code-from
