@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  puppeteer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: puppeteer
+    environment:
+      - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+      - PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
+    command: npm test

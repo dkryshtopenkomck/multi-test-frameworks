@@ -1,0 +1,26 @@
+{
+  "name": "puppeteer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:update": "jest --updateSnapshot",
+    "test:lint": "eslint .",
+    "test:ci": "jest --ci --maxWorkers=2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "puppeteer": "^24.2.0",
+    "puppeteer-core": "^24.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/puppeteer": "^5.4.7",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5"
+  }
+}
