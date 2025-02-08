@@ -36,4 +36,4 @@ jobs:
       - name: Build and run Playwright container
         working-directory: ./playwright
         run: |
-          docker-compose run --rm --build playwright
+          docker-compose run playwright

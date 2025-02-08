@@ -36,4 +36,4 @@ jobs:
       - name: Build and run TestCafe container
         working-directory: ./testcafe
         run: |
-          docker-compose run --rm --build testcafe
+          docker-compose run testcafe
