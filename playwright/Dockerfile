@@ -14,4 +14,4 @@ RUN npm ci
 COPY . .
 
 # By default, we'll run the tests, but you can open a bash shell if needed
-CMD ["npm", "test"]
+CMD ["npx", "playwright", "test"]
