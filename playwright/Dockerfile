@@ -8,6 +8,7 @@ COPY package*.json ./
 
 # Install your Node.js dependencies
 RUN npm ci
+#RUN npx playwright install --with-deps
 
 # Copy the rest of your application code
 COPY . .

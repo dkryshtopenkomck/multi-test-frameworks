@@ -8,7 +8,8 @@ services:
     container_name: playwright
     volumes:
       - .:/app
-#    environment:
+    environment:
+      - PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=false
 #      - PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
-    command: npx playwright test --project=chromium
-    ipc: host
+    command: npx playwright test --project=firefox
+#    ipc: host
