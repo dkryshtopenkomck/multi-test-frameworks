@@ -36,4 +36,4 @@ jobs:
       - name: Build and run TestCafe container
         working-directory: ./testcafe
         run: |
-          docker-compose build --abort-on-container-exit --exit-code-from
+          docker-compose run --build --no-cache --abort-on-container-exit --exit-code-from
