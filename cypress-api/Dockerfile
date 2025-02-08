@@ -1,20 +1,31 @@
-# Use an official Cypress base image
-FROM cypress/base:latest
+# 🟢 1-й этап: билдим приложение
+FROM node:20.16.0-slim AS builder
 
-# Set the working directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
-# Copy package.json and package-lock.json to the container
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    xvfb \
+    libnss3 \
+    libgtk-3-0 \
+    libgbm-dev \
+    libasound2 \
+    fonts-liberation \
+    libgtk2.0-0 \
+    libnotify-dev \
+    libxss1 \
+    libxtst6 \
+    xauth && \
+    rm -rf /var/lib/apt/lists/* && \
+    rm -rf /tmp/*
+
 COPY package*.json ./
+RUN npm install
 
-# Install project dependencies
-RUN npm ci
-
-# Copy the rest of the application code to the container
 COPY . .
 
-# Expose the necessary ports for Cypress
-EXPOSE 80 443 8080 3000
+# Открываем порты, если тесты требуют запущенного сервера
+#EXPOSE 80 443 8080 3000
 
-# Run Cypress tests in headless mode
-CMD ["npm", "run", "cypress:run"]
+# Запускаем Cypress в headless-режиме
+CMD ["npm", "run", "test"]
