@@ -2,7 +2,7 @@
 FROM cypress/included:cypress-13.13.1-node-20.15.1-chrome-127.0.6533.72-1-ff-128.0-edge-126.0.2592.102-1
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /usr/src/app
 
 # Copy package.json and package-lock.json first for npm installation
 COPY package*.json ./
