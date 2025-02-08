@@ -3,7 +3,7 @@ start:
 	#docker-compose up
 
 start-docker:
-	docker-compose run --rm --build cypress-api
+	docker-compose run --rm --build cypress
 
 clean:
 	rm -rf cypress/screenshots cypress/videos cypress/downloads
