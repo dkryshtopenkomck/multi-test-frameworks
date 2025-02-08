@@ -1,6 +1,7 @@
 **/dist
 **/node_modules
 **/reports
+**/test-results
 **/allure
 **/allure-report
 **/allure-results
