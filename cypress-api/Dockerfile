@@ -20,9 +20,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     rm -rf /tmp/*
 
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 
 COPY . .
+
+#ENV HOME=/home/node
+#RUN chmod -R 777 $HOME /root/.cache/Cypress
 
 # Открываем порты, если тесты требуют запущенного сервера
 #EXPOSE 80 443 8080 3000

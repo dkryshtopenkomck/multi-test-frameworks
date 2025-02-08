@@ -1,5 +1,4 @@
-# Use the official Playwright image from Microsoft as the base image
-FROM mcr.microsoft.com/playwright:v1.50.1-noble
+FROM node:20.16.0-slim
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -8,7 +7,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install your Node.js dependencies
-RUN npm install
+RUN npm ci
 
 # Copy the rest of your application code
 COPY . .
