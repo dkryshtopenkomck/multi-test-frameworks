@@ -10,15 +10,27 @@
     "allure:generate": "allure generate allure/allure-results --clean",
     "allure:clean": "rm -rf allure ; rm -rf allure-report",
     "clean": "rm -rf dist allure allure-report reports/screenshots/* reports/videos/*",
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "eslint --fix",
+    "format": "prettier --write \"**/*.{js,ts,json,md}\""
   },
-  "keywords": ["testcafe", "e2e", "web"],
+  "keywords": [
+    "testcafe",
+    "e2e",
+    "web"
+  ],
   "author": "Kryshtopenko Dmytro",
   "license": "ISC",
   "devDependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@types/node": "^20.5.1",
+    "@typescript-eslint/eslint-plugin": "^8.23.0",
+    "@typescript-eslint/parser": "^8.23.0",
     "allure-commandline": "^2.23.1",
+    "eslint": "^9.20.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "prettier": "^3.4.2",
     "testcafe": "^3.2.0",
     "testcafe-reporter-html": "^1.4.6",
     "ts-node": "^10.9.1",

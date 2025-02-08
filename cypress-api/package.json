@@ -12,14 +12,26 @@
     "test:all": "npm run cypress:run -- --spec 'cypress/integration/**/*.spec.js'",
     "cy:clean": "rm -rf cypress/videos && rm -rf cypress/screenshots",
     "cy:lint": "eslint cypress",
-    "cy:run-and-lint": "npm run cypress:run && npm run cy:lint"
+    "cy:run-and-lint": "npm run cypress:run && npm run cy:lint",
+    "lint": "eslint --fix",
+    "format": "prettier --write \"**/*.{js,ts,json,md}\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
+    "@typescript-eslint/eslint-plugin": "^8.23.0",
+    "@typescript-eslint/parser": "^8.23.0",
     "cypress": "^13.6.4",
+    "eslint": "^9.20.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-cypress": "^4.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsdoc": "^50.6.3",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-promise": "^7.2.1",
+    "prettier": "^3.4.2",
     "typescript": "^5.3.2"
   },
   "dependencies": {

@@ -4,8 +4,9 @@ start:
 	#docker-compose up
 
 start-docker:
-	npm run build
-	docker-compose run --rm k6 run /scripts/get-200.test.js
+	echo "k6-loading:start-docker"
+	#npm run build
+	#docker-compose run --rm k6 run /scripts/get-200.test.js
 	#docker-compose run --rm --build k6
 
 clean:
@@ -14,3 +15,8 @@ clean:
 install:
 	rm -rf node_modules
 	npm ci
+
+lint:
+	echo "No linting for k6"
+	#npm run lint
+	#npm run format

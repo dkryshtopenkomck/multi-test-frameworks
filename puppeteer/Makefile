@@ -2,7 +2,7 @@ start:
 	npm test
 
 start-docker:
-	docker-compose run --rm --build playwright
+	docker-compose run --rm --build puppeteer
 
 clean:
 	npm run clean
