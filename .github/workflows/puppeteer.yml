@@ -1,4 +1,4 @@
-name: Cypress API Test
+name: Puppeteer Test
 
 on:
   push:
@@ -33,7 +33,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and run Cypress API container
-        working-directory: ./cypress-api
+      - name: Build and run Puppeteer container
+        working-directory: ./puppeteer
         run: |
           docker-compose up --build --abort-on-container-exit --exit-code-from puppeteer
