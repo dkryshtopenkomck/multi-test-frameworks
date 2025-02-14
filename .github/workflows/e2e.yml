@@ -40,4 +40,4 @@ jobs:
       - name: Build and run container
         working-directory: ./${{ matrix.working_directory }}
         run: |
-          docker-compose up --build --abort-on-container-exit --exit-code-from
+          docker-compose -f ${{ matrix.working_directory }}/docker-compose.yml up --build --abort-on-container-exit --exit-code-from ${{ matrix.working_directory }}
