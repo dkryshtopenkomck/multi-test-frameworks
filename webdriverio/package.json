@@ -2,7 +2,6 @@
   "name": "webdriverio",
   "version": "1.0.0",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "clean": "rm -rf ./reports",
     "build": "tsc",
@@ -11,8 +10,9 @@
     "test:sauce": "wdio run wdio.sauce.conf.ts"
   },
   "devDependencies": {
-    "@wdio/eslint": "^0.0.5",
     "@types/jasmine": "^5.1.6",
+    "@typescript-eslint/eslint-plugin": "^8.24.0",
+    "@typescript-eslint/parser": "^8.24.0",
     "@wdio/cli": "9.9.0",
     "@wdio/globals": "9.9.0",
     "@wdio/jasmine-framework": "9.9.0",
@@ -20,6 +20,10 @@
     "@wdio/sauce-service": "9.9.0",
     "@wdio/spec-reporter": "9.9.0",
     "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-wdio": "^9.6.0",
+    "prettier": "^3.5.1",
     "typescript": "^5.7.3",
     "webdriverio": "9.9.0"
   }
