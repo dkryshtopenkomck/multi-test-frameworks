@@ -1,4 +1,4 @@
-name: TestCafe Test
+name: WebDriverIO Test
 
 on:
   push:
