@@ -1,4 +1,4 @@
-name: TestCafe Test
+name: Run API Tests
 
 on:
   push:
@@ -13,6 +13,11 @@ jobs:
       docker:
         image: docker:19.03.12
         options: --privileged
+
+    strategy:
+      matrix:
+        container: [cypress-api, playwright, puppeteer, testcafe, webdriverio]
+        working_directory: [cypress-api, playwright, puppeteer, testcafe, webdriverio]
 
     steps:
       - name: Checkout repository
@@ -33,7 +38,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and run TestCafe container
-        working-directory: ./testcafe
+      - name: Build and run container
+        working-directory: ./${{ matrix.working_directory }}
         run: |
-          docker-compose up --build --abort-on-container-exit --exit-code-from testcafe
+          docker-compose -f ./${{ matrix.working_directory }}/docker-compose.yml up --build --abort-on-container-exit --exit-code-from ${{ matrix.container }}
