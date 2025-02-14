@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  webdriverio:
+    environment:
+      - NODE_ENV=test  # Ensure the right environment for debugging
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: webdriverio
+    command: 'npm test'
+    volumes:
+      - ./reports:/app/reports
