@@ -16,7 +16,6 @@ jobs:
 
     strategy:
       matrix:
-        container: [cypress-api, playwright, puppeteer, testcafe, webdriverio]
         working_directory: [cypress-api, playwright, puppeteer, testcafe, webdriverio]
 
     steps:
@@ -41,4 +40,4 @@ jobs:
       - name: Build and run container
         working-directory: ./${{ matrix.working_directory }}
         run: |
-          docker-compose -f ./${{ matrix.working_directory }}/docker-compose.yml up --build --abort-on-container-exit --exit-code-from ${{ matrix.container }}
+          docker-compose -f ./${{ matrix.working_directory }}/docker-compose.yml up --build --abort-on-container-exit --exit-code-from ${{ matrix.working_directory }}
